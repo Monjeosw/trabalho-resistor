@@ -13,9 +13,10 @@ import javax.swing.JPanel;
 
 public class Panel2D extends JPanel {
     Image figura;
-    PanelInferior baixo;
-    Graphics2D graphics2d;
-    private Color color = Color.BLACK;
+    Graphics2D faixa1;
+    Graphics2D faixa2;
+    private Color colorFaixa1 = Color.BLACK;
+    private Color colorFaixa2 = Color.BLACK;
     
     private static Panel2D uniqueInstance = new Panel2D();
     
@@ -26,7 +27,7 @@ public class Panel2D extends JPanel {
         //baixo = new PanelInferior();
         //this.add(baixo,BorderLayout.CENTER);
         
-       this.setPreferredSize(new Dimension(700,300));
+       this.setPreferredSize(new Dimension(700,200));
        
     }
     
@@ -36,21 +37,34 @@ public class Panel2D extends JPanel {
     
     @Override
     public void paintComponent(Graphics g){
-       graphics2d = (Graphics2D) g;
+        faixa1 = (Graphics2D) g;
+        faixa1.drawImage(figura, 0, -200, null);
+        faixa1.setColor(getColorFaixa1());
+        faixa1.fillRect(271, 118, 7, 61);
         
-        graphics2d.drawImage(figura, 0, -200, null);
-        graphics2d.setColor(getColor());
-        graphics2d.fillRect(271, 118, 7, 61);
+        
+        faixa2 =(Graphics2D) g;
+        faixa2.setColor(getColorFaixa2());
+        faixa2.fillRect(350, 118, 7, 61);
     }
     
-    public Color getColor(){
-        return color;
+    public Color getColorFaixa1(){
+        return colorFaixa1;
     }
+    
     public void setColor (Color color){
-        this.color = color;
-       
+        this.colorFaixa1 = color;
         repaint(271,118,7,61);
         //repaint();
+    }
+    
+     public Color getColorFaixa2(){
+        return colorFaixa2;
+    }
+    public void setColorFaixa2 (Color colorFaixa2){
+        this.colorFaixa2 = colorFaixa2;
+        repaint(350,118,7,61);
+       
     }
     
   
