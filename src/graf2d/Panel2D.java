@@ -14,35 +14,40 @@ import javax.swing.JPanel;
 public class Panel2D extends JPanel {
     Image figura;
     PanelInferior baixo;
+    Graphics2D graphics2d;
+    private static Panel2D uniqueInstance = new Panel2D();
     
-   
-    Panel2D(){
+    private Panel2D(){
+       
         this.setLayout(new BorderLayout());
         figura = new ImageIcon("resistor2.png").getImage();
-        baixo = new PanelInferior();
-        this.add(baixo,BorderLayout.CENTER);
+        //baixo = new PanelInferior();
+        //this.add(baixo,BorderLayout.CENTER);
         
-       this.setPreferredSize(new Dimension(700,800));
-        
-        
-        
+       this.setPreferredSize(new Dimension(700,300));
+       
+    }
+    
+    public static Panel2D getInstance(){
+        return uniqueInstance;
     }
     
     @Override
     public void paint(Graphics g){
-        Graphics2D gD = (Graphics2D) g;
+       graphics2d = (Graphics2D) g;
         
-        gD.drawImage(figura, 0, -200, null);
-        
-        
-          
-            gD.setPaint(Color.pink);
-        
-        gD.fillRect(271, 118, 7, 61);
+        graphics2d.drawImage(figura, 0, -200, null);
+        graphics2d.setColor(Color.BLUE);
+        graphics2d.fillRect(271, 118, 7, 61);
     }
     
-    /*public JPanel opcao(){
+    public void changeComponentColor(Color color){
+        graphics2d.setColor(color);
         
-    }*/
+    }
+    
+    
+    
+    
    
 }

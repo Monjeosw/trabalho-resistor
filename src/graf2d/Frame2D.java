@@ -8,12 +8,13 @@ import javax.swing.JFrame;
 public class Frame2D extends JFrame {
    
     Frame2D(){
-        //PanelInferior inferior = new PanelInferior();
+        PanelInferior inferior = new PanelInferior();
         //this.setLayout(new BorderLayout());
              
-        Panel2D panel = new Panel2D();
-        this.add(panel);
-        //this.add(inferior,BorderLayout.CENTER);
+        Panel2D panel = Panel2D.getInstance();
+        
+        this.add(panel,BorderLayout.NORTH);
+        this.add(inferior,BorderLayout.SOUTH);
        
         
         
