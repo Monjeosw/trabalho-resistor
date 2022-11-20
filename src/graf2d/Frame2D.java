@@ -19,8 +19,8 @@ public class Frame2D extends JFrame {
         
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.pack();
-        //this.setSize(800,800);
+        //this.pack();
+        this.setSize(800,800);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
       

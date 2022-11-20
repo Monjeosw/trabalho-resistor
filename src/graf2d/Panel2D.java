@@ -15,6 +15,8 @@ public class Panel2D extends JPanel {
     Image figura;
     PanelInferior baixo;
     Graphics2D graphics2d;
+    private Color color = Color.BLACK;
+    
     private static Panel2D uniqueInstance = new Panel2D();
     
     private Panel2D(){
@@ -33,21 +35,23 @@ public class Panel2D extends JPanel {
     }
     
     @Override
-    public void paint(Graphics g){
+    public void paintComponent(Graphics g){
        graphics2d = (Graphics2D) g;
         
         graphics2d.drawImage(figura, 0, -200, null);
-        graphics2d.setColor(Color.BLUE);
+        graphics2d.setColor(getColor());
         graphics2d.fillRect(271, 118, 7, 61);
     }
     
-    public void changeComponentColor(Color color){
-        graphics2d.setColor(color);
-        
+    public Color getColor(){
+        return color;
+    }
+    public void setColor (Color color){
+        this.color = color;
+       
+        repaint(271,118,7,61);
+        //repaint();
     }
     
-    
-    
-    
-   
+  
 }

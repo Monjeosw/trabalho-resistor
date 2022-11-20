@@ -23,6 +23,7 @@ public class PanelInferior extends JPanel  {
         JComboBox combo;
         JComboBox combo2;
         Panel2D panel = Panel2D.getInstance();
+        private final static int COR_VERDE [] = {0,128,0};
     PanelInferior(){
         
         cor = new ImageIcon ("preto.png");
@@ -72,8 +73,9 @@ public class PanelInferior extends JPanel  {
         combo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String a = (String)combo.getSelectedItem();
                 imagem.setIcon(getCor((String)combo.getSelectedItem()));
-                panel.changeComponentColor(Color.BLACK);
+                panel.setColor(changeColor(COR_VERDE));
             }
         });
         
@@ -116,6 +118,10 @@ public class PanelInferior extends JPanel  {
             }
         }
             return image;
+    }
+    
+    private Color changeColor(int cor[]){
+        return new Color(cor[0],cor[1],cor[2]);
     }
         
    
