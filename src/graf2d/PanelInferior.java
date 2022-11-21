@@ -23,7 +23,7 @@ public class PanelInferior extends JPanel  {
         private final ImageIcon cor;
         private JComboBox combo;
         private JComboBox combo2;
-        private Panel2D panel = Panel2D.getInstance();
+        private Resistor panel = Resistor.getInstance();
         private final static int COR_VERDE [] = {0,128,0};
         private final static int COR_PRETO [] = {0,0,0};
         private final static int COR_VERMELHO [] = {250,0,0};

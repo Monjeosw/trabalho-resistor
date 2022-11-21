@@ -11,16 +11,16 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
-public class Panel2D extends JPanel {
+public class Resistor extends JPanel {
     Image figura;
     Graphics2D faixa1;
     Graphics2D faixa2;
     private Color colorFaixa1 = Color.BLACK;
     private Color colorFaixa2 = Color.BLACK;
     
-    private static Panel2D uniqueInstance = new Panel2D();
+    private static Resistor uniqueInstance = new Resistor();
     
-    private Panel2D(){
+    private Resistor(){
        
         this.setLayout(new BorderLayout());
         figura = new ImageIcon("resistor2.png").getImage();
@@ -31,7 +31,7 @@ public class Panel2D extends JPanel {
        
     }
     
-    public static Panel2D getInstance(){
+    public static Resistor getInstance(){
         return uniqueInstance;
     }
     
