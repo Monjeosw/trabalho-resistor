@@ -45,7 +45,7 @@ public class Panel2D extends JPanel {
         
         faixa2 =(Graphics2D) g;
         faixa2.setColor(getColorFaixa2());
-        faixa2.fillRect(350, 118, 7, 61);
+        faixa2.fillRect(313, 124, 7, 52);
     }
     
     public Color getColorFaixa1(){

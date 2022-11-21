@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class PanelInferior extends JPanel  {
         private JLabel imagem ;   
         private JLabel imagem2 ;   
-        private ImageIcon cor;
+        private final ImageIcon cor;
         private JComboBox combo;
         private JComboBox combo2;
         private Panel2D panel = Panel2D.getInstance();
@@ -41,7 +41,7 @@ public class PanelInferior extends JPanel  {
         this.setPreferredSize(new Dimension(700,400));
         
         String [] color = {"preto","marrom","vermelho"};
-        combo = new JComboBox(color);
+        combo = new JComboBox(color); // primeira faixa não pode ser preto.
         combo2= new JComboBox(color);
         
         combo.setVisible(true);
