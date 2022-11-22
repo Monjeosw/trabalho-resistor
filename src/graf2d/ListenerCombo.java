@@ -18,6 +18,7 @@ public class ListenerCombo implements ActionListener {
     private final static int COR_MARROM [] = {178,34,34}; //FEITO
     private final static int COR_LARANJA [] = {255,165,0}; //FEITO
     private final static int COR_AMARELO [] = {255,255,0};//FEITO
+    private final static int COR_DOURADO [] = {218,165,32};//FEITO
     
     private int NUM_FAIXA;
     
@@ -39,6 +40,12 @@ public class ListenerCombo implements ActionListener {
             }
             case 3 -> {
                 panel.setColorFaixa3(changeColor(getChangeColor((String)combo.getSelectedItem())));
+            }
+            case 4 -> {
+                panel.setColorFaixa4(changeColor(getChangeColor((String)combo.getSelectedItem())));
+            }
+             case 5 -> {
+                panel.setColorFaixa5(changeColor(getChangeColor((String)combo.getSelectedItem())));
             }
         }
     }
@@ -67,6 +74,9 @@ public class ListenerCombo implements ActionListener {
             }
             case "VERDE"->{
                 corConstante = COR_VERDE;
+            }
+            case "DOURADO"->{
+                corConstante = COR_DOURADO;
             }
             default -> {
                 
@@ -97,6 +107,9 @@ public class ListenerCombo implements ActionListener {
             }
             case "VERDE"->{
                 image = new ImageIcon("img/verdeProjeto.png");
+            }
+            case "DOURADO"->{
+                image = new ImageIcon("img/douradoProjeto.png");
             }
             default -> {
                 
