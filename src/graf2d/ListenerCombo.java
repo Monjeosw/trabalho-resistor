@@ -22,8 +22,8 @@ public class ListenerCombo implements ActionListener {
         this.corCombo = corCombo;
         this.combo = combo;
         this.NUM_FAIXA = NUM_FAIXA;
-        
     }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         corCombo.setIcon(getCor((String)combo.getSelectedItem()));
@@ -35,26 +35,8 @@ public class ListenerCombo implements ActionListener {
                 panel.setColorFaixa2(changeColor(getChangeColor((String)combo.getSelectedItem())));
             }
         }
-        
-        
     }
     
-    private ImageIcon getCor(String cor){
-        ImageIcon image = null;
-        
-        switch (cor){
-            case "preto" -> {
-                image = new ImageIcon("img/preto.png");
-            }
-            case "marrom"->{
-                image = new ImageIcon("img/marrom.png");
-            }
-            default -> {
-                
-            }
-        }
-            return image;
-    }
     private Color changeColor(int cor[]){
         return new Color(cor[0],cor[1],cor[2]);
     }
@@ -76,4 +58,22 @@ public class ListenerCombo implements ActionListener {
    
     }
     
+    private ImageIcon getCor(String cor){
+        ImageIcon image = null;
+        
+        switch (cor){
+            case "preto" -> {
+                image = new ImageIcon("img/preto.png");
+            }
+            case "marrom"->{
+                image = new ImageIcon("img/marrom.png");
+            }
+            default -> {
+                
+            }
+        }
+            return image;
+    }
+   
+  
 }

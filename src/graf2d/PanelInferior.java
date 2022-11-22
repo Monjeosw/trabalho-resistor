@@ -24,10 +24,6 @@ public class PanelInferior extends JPanel  {
         private JComboBox combo;
         private JComboBox combo2;
         private Resistor panel = Resistor.getInstance();
-        private final static int COR_VERDE [] = {0,128,0};
-        private final static int COR_PRETO [] = {0,0,0};
-        private final static int COR_VERMELHO [] = {250,0,0};
-        private final static int COR_MARROM [] = {178,34,34};
         private final static int NUM_FAIXA1 = 1;
         private final static int NUM_FAIXA2 = 2;
         
@@ -42,10 +38,10 @@ public class PanelInferior extends JPanel  {
         this.setLayout(new GridBagLayout());
         this.setPreferredSize(new Dimension(700,400));
         
-        String [] color = {"preto","marrom","vermelho"};
+        String [] fullColors = {"preto","marrom","vermelho"};
         String [] colorFiaxa1 = {"marrom","vermelho"};
         combo = new JComboBox(colorFiaxa1); // primeira faixa não pode ser preto.
-        combo2= new JComboBox(color);
+        combo2= new JComboBox(fullColors);
         
         combo.setVisible(true);
          combo2.setVisible(true);
