@@ -5,11 +5,10 @@ package graf2d;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -32,11 +31,11 @@ public class PanelInferior extends JPanel  {
     PanelInferior(){
        
         imagem = new JLabel();
-        imagem.setIcon( new ImageIcon ("img/marrom.png"));
+        imagem.setIcon( new ImageIcon ("img/marromProjeto.png"));
         imagem2 = new JLabel();
-        imagem2.setIcon( new ImageIcon ("img/preto.png"));
+        imagem2.setIcon( new ImageIcon ("img/pretoProjeto.png"));
         imagem3 = new JLabel();
-        imagem3.setIcon( new ImageIcon ("img/preto.png"));
+        imagem3.setIcon( new ImageIcon ("img/pretoProjeto.png"));
         
         this.setLayout(new GridBagLayout());
         this.setPreferredSize(new Dimension(700,500));
@@ -63,14 +62,18 @@ public class PanelInferior extends JPanel  {
         this.add(resultadoResistencia,gb);
         
         //PRIMEIRA FAIXA.
+        JPanel panelLabel = new JPanel();
         JLabel label = new JLabel("1 faixa:");
+        label.setFont(new Font("Arial",Font.ITALIC,30)); // mudançca de tamanho e de fonte.
+        panelLabel.add(label);
+        panelLabel.setBackground(Color.yellow);
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 1;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(label,gb);
+        this.add(panelLabel,gb);
         
         //SEGUNDA FAIXA.
         JLabel labalFaixa2 = new JLabel("2 faixa:");

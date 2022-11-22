@@ -26,7 +26,7 @@ public class Resistor extends JPanel {
         this.setLayout(new BorderLayout());
         figura = new ImageIcon("img/resistor2.png").getImage(); 
         this.setPreferredSize(new Dimension(700,200));
-       
+        this.setBackground(Color.YELLOW);
     }
     
     public static Resistor getInstance(){
@@ -75,7 +75,7 @@ public class Resistor extends JPanel {
     
     public void setColorFaixa2 (Color colorFaixa2){
         this.colorFaixa2 = colorFaixa2;
-        repaint(331,124,8,52);
+        repaint(313,124,8,52);
        
     }
     

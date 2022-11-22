@@ -12,11 +12,12 @@ public class ListenerCombo implements ActionListener {
     private JLabel corCombo;
     private JComboBox combo;
     private Resistor panel = Resistor.getInstance();
-    private final static int COR_VERDE [] = {0,128,0};
-    private final static int COR_PRETO [] = {0,0,0};
-    private final static int COR_VERMELHO [] = {250,0,0};
-    private final static int COR_MARROM [] = {178,34,34};
-    private final static int COR_LARANJA [] = {255,165,0};
+    private final static int COR_VERDE [] = {127,255,0};
+    private final static int COR_PRETO [] = {0,0,0}; //feito
+    private final static int COR_VERMELHO [] = {250,0,0}; //Feito
+    private final static int COR_MARROM [] = {178,34,34}; //FEITO
+    private final static int COR_LARANJA [] = {255,165,0}; //FEITO
+    private final static int COR_AMARELO [] = {255,255,0};//FEITO
     
     private int NUM_FAIXA;
     
@@ -61,6 +62,12 @@ public class ListenerCombo implements ActionListener {
             case "LARANJA"->{
                 corConstante = COR_LARANJA;
             }
+            case "AMARELO"->{
+                corConstante = COR_AMARELO;
+            }
+            case "VERDE"->{
+                corConstante = COR_VERDE;
+            }
             default -> {
                 
             }
@@ -74,16 +81,22 @@ public class ListenerCombo implements ActionListener {
         
         switch (cor){
             case "PRETO" -> {
-                image = new ImageIcon("img/preto.png");
+                image = new ImageIcon("img/pretoProjeto.png");
             }
             case "MARROM"->{
-                image = new ImageIcon("img/marrom.png");
+                image = new ImageIcon("img/marromProjeto.png");
             }
             case "VERMELHO"->{
-                image = new ImageIcon("img/vermelho.png");
+                image = new ImageIcon("img/vermelhoProjeto.png");
             }
             case "LARANJA"->{
-                image = new ImageIcon("img/laranja.jpg");
+                image = new ImageIcon("img/laranjaProjeto.png");
+            }
+            case "AMARELO"->{
+                image = new ImageIcon("img/amareloProjeto.png");
+            }
+            case "VERDE"->{
+                image = new ImageIcon("img/verdeProjeto.png");
             }
             default -> {
                 
