@@ -52,7 +52,7 @@ public class Resistor extends JPanel {
         return colorFaixa1;
     }
     
-    public void setColor (Color color){
+    public void setColorFaixa1 (Color color){
         this.colorFaixa1 = color;
         repaint(271,118,7,61);
         //repaint();
