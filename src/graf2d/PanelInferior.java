@@ -32,7 +32,7 @@ public class PanelInferior extends JPanel  {
         
     PanelInferior(){
         
-        cor = new ImageIcon ("preto.png");
+        cor = new ImageIcon ("img/marrom.png");
         imagem = new JLabel();
         imagem.setIcon(cor);
         imagem2 = new JLabel();
@@ -41,7 +41,8 @@ public class PanelInferior extends JPanel  {
         this.setPreferredSize(new Dimension(700,400));
         
         String [] color = {"preto","marrom","vermelho"};
-        combo = new JComboBox(color); // primeira faixa não pode ser preto.
+        String [] colorFiaxa1 = {"marrom","vermelho"};
+        combo = new JComboBox(colorFiaxa1); // primeira faixa não pode ser preto.
         combo2= new JComboBox(color);
         
         combo.setVisible(true);
@@ -103,7 +104,16 @@ public class PanelInferior extends JPanel  {
         });
         
         this.add(combo,gb);
-     
+        
+         //PRIMEIRA FAIXA.
+        JLabel labalFaixa2 = new JLabel("2 faixa:");
+        gb = new GridBagConstraints();
+        gb.gridx = 0;        
+        gb.gridy = 3;
+        gb.gridwidth =1 ;
+        gb.gridheight = 1;
+        gb.ipadx = 25;
+        this.add(labalFaixa2,gb);
       
         //COMBO SEGUNDA FAIXA.
         gb = new GridBagConstraints();
