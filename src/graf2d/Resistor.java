@@ -43,11 +43,11 @@ public class Resistor extends JPanel {
         
         faixa2 =(Graphics2D) g;
         faixa2.setColor(getColorFaixa2());
-        faixa2.fillRect(313, 124, 7, 52);
+        faixa2.fillRect(313, 124, 8, 52);
         
         faixa3 =(Graphics2D) g;
         faixa3.setColor(getColorFaixa3());
-        faixa3.fillRect(339, 124, 7, 52);
+        faixa3.fillRect(338, 124, 8, 52);
         
         
         
@@ -75,13 +75,13 @@ public class Resistor extends JPanel {
     
     public void setColorFaixa2 (Color colorFaixa2){
         this.colorFaixa2 = colorFaixa2;
-        repaint(331,124,7,52);
+        repaint(331,124,8,52);
        
     }
     
     public void setColorFaixa3 (Color colorFaixa3){
         this.colorFaixa3 = colorFaixa3;
-        repaint(339,124,7,52);
+        repaint(338,124,8,52);
     }
     
   

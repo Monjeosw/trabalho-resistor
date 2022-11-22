@@ -9,7 +9,7 @@ public class Frame2D extends JFrame {
    
     Frame2D(){
         PanelInferior inferior = new PanelInferior();
-        //this.setLayout(new BorderLayout());
+        this.setLayout(new BorderLayout());
              
         Resistor panel = Resistor.getInstance();
         this.add(panel,BorderLayout.NORTH);

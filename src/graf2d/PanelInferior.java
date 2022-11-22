@@ -41,8 +41,12 @@ public class PanelInferior extends JPanel  {
         this.setLayout(new GridBagLayout());
         this.setPreferredSize(new Dimension(700,500));
         
-        String [] fullColors = {"preto","marrom","vermelho"};
-        String [] colorFiaxa1 = {"marrom","vermelho"};
+        String [] fullColors = {"PRETO","MARROM","VERMELHO","LARANJA","AMARELO",
+                                "VERDE","AZUL","VIOLETA","CINZA","BRANCO"};
+        
+        String [] colorFiaxa1 = {"MARROM","VERMELHO","LARANJA","AMARELO",
+                                "VERDE","AZUL","VIOLETA","CINZA","BRANCO"};
+        
         comboFaixa1 = new JComboBox(colorFiaxa1); // primeira faixa não pode ser preto.
         comboFaixa2= new JComboBox(fullColors);
         comboFaixa3= new JComboBox(fullColors);

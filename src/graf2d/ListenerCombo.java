@@ -16,6 +16,8 @@ public class ListenerCombo implements ActionListener {
     private final static int COR_PRETO [] = {0,0,0};
     private final static int COR_VERMELHO [] = {250,0,0};
     private final static int COR_MARROM [] = {178,34,34};
+    private final static int COR_LARANJA [] = {255,165,0};
+    
     private int NUM_FAIXA;
     
     ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA){
@@ -47,14 +49,17 @@ public class ListenerCombo implements ActionListener {
     private int [] getChangeColor(String cor){
         int corConstante [] = null;
         switch (cor){
-            case "preto" -> {
+            case "PRETO" -> {
                 corConstante = COR_PRETO;
             }
-            case "marrom"->{
+            case "MARROM"->{
                 corConstante = COR_MARROM;
             }
-            case "vermelho"->{
+            case "VERMELHO"->{
                 corConstante = COR_VERMELHO;
+            }
+            case "LARANJA"->{
+                corConstante = COR_LARANJA;
             }
             default -> {
                 
@@ -68,14 +73,17 @@ public class ListenerCombo implements ActionListener {
         ImageIcon image = null;
         
         switch (cor){
-            case "preto" -> {
+            case "PRETO" -> {
                 image = new ImageIcon("img/preto.png");
             }
-            case "marrom"->{
+            case "MARROM"->{
                 image = new ImageIcon("img/marrom.png");
             }
-            case "vermelho"->{
+            case "VERMELHO"->{
                 image = new ImageIcon("img/vermelho.png");
+            }
+            case "LARANJA"->{
+                image = new ImageIcon("img/laranja.jpg");
             }
             default -> {
                 
