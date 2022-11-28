@@ -9,19 +9,26 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 
 
-public class PanelInferior extends JPanel  {
+public class PanelInferior extends JPanel implements ActionListener  {
         private JLabel imagem ;   
         private JLabel imagem2 ;   
         private JLabel imagem3 ; 
         private JLabel imagem4 ; 
         private JLabel imagem5 ; 
+        private JButton butao;
+        private JTextField resultadoResistencia = new JTextField();
         private JComboBox comboFaixa1;
         private JComboBox comboFaixa2;
         private JComboBox comboFaixa3;
@@ -34,6 +41,7 @@ public class PanelInferior extends JPanel  {
         private final static int NUM_FAIXA4 = 4;
         private final static int NUM_FAIXA5 = 5;
         
+    
     PanelInferior(){
        
         imagem = new JLabel();
@@ -56,7 +64,7 @@ public class PanelInferior extends JPanel  {
         String [] colorFiaxa1 = {"MARROM","VERMELHO","LARANJA","AMARELO",
                                 "VERDE","AZUL","VIOLETA","CINZA","BRANCO"};
         
-         String [] colorFaixa5 = {"DOURADO","PRATA"};
+        String [] colorFaixa5 = {"DOURADO","PRATA"};
         
         comboFaixa1 = new JComboBox(colorFiaxa1); // primeira faixa não pode ser preto.
         comboFaixa2= new JComboBox(fullColors);
@@ -67,7 +75,10 @@ public class PanelInferior extends JPanel  {
         
         GridBagConstraints gb;
         
-        JLabel resultadoResistencia = new JLabel("RESULTADO:");
+        
+       
+        resultadoResistencia.setPreferredSize(new Dimension(250,40));
+        resultadoResistencia.setFont(new Font("Consolas",Font.PLAIN,35));
         gb = new GridBagConstraints();
         gb.gridx = 1;        
         gb.gridy = 0;
@@ -75,6 +86,16 @@ public class PanelInferior extends JPanel  {
         gb.gridheight = 1;
         //gb.ipadx = 25;
         this.add(resultadoResistencia,gb);
+        
+        butao = new JButton("Resultado");
+        gb = new GridBagConstraints();
+        gb.gridx = 3;        
+        gb.gridy = 0;
+        gb.gridwidth =2 ;
+        gb.gridheight = 1;
+        gb.insets = new Insets(0,30,0,0);
+        butao.addActionListener(this);
+        this.add(butao,gb);
         
         //PRIMEIRA FAIXA.
         JPanel panelLabel = new JPanel();
@@ -224,13 +245,45 @@ public class PanelInferior extends JPanel  {
         
 
         
-        comboFaixa1.addActionListener(new ListenerCombo(imagem, comboFaixa1,NUM_FAIXA1));
-        comboFaixa2.addActionListener(new ListenerCombo(imagem2, comboFaixa2,NUM_FAIXA2));
-        comboFaixa3.addActionListener(new ListenerCombo(imagem3, comboFaixa3,NUM_FAIXA3));
-        comboFaixa4.addActionListener(new ListenerCombo(imagem4, comboFaixa4,NUM_FAIXA4));
-        comboFaixa5.addActionListener(new ListenerCombo(imagem5, comboFaixa5,NUM_FAIXA4));
+        comboFaixa1.addActionListener(new ListenerCombo(imagem, comboFaixa1,NUM_FAIXA1,getAllIndex()));
+        comboFaixa2.addActionListener(new ListenerCombo(imagem2, comboFaixa2,NUM_FAIXA2,getAllIndex()));
+        comboFaixa3.addActionListener(new ListenerCombo(imagem3, comboFaixa3,NUM_FAIXA3,getAllIndex()));
+        comboFaixa4.addActionListener(new ListenerCombo(imagem4, comboFaixa4,NUM_FAIXA4,getAllIndex()));
+        comboFaixa5.addActionListener(new ListenerCombo(imagem5, comboFaixa5,NUM_FAIXA4,getAllIndex()));
+        comboFaixa1.addActionListener(this);
+        comboFaixa2.addActionListener(this);
       
     }
+    
+    
+     
+    private int [] getAllIndex(){
+        int [] allIndex = new int [] {(comboFaixa1.getSelectedIndex()+1),comboFaixa2.getSelectedIndex(),comboFaixa3.getSelectedIndex(),
+                                      comboFaixa4.getSelectedIndex() ,comboFaixa5.getSelectedIndex()} ;
+        
+        return allIndex;
+            
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == comboFaixa1){
+            String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
+            resultadoResistencia.setText(resposta);
+            
+        }
+         if(e.getSource() == comboFaixa2){
+            String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
+            resultadoResistencia.setText(resposta);
+            
+        }
+        /*String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
+        resultadoResistencia.setText(resposta);*/
+    //}
+   }
+    
+   
+    
 }
     
   

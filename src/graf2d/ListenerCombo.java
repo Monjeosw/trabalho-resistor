@@ -4,14 +4,18 @@ package graf2d;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class ListenerCombo implements ActionListener {
     private JLabel corCombo;
     private JComboBox combo;
     private Resistor panel = Resistor.getInstance();
+    private int index [] = new int [5];
+    
     private final static int COR_VERDE [] = {127,255,0};
     private final static int COR_PRETO [] = {0,0,0}; //feito
     private final static int COR_VERMELHO [] = {250,0,0}; //Feito
@@ -22,18 +26,20 @@ public class ListenerCombo implements ActionListener {
     
     private int NUM_FAIXA;
     
-    ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA){
+    ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA,int index []){
         this.corCombo = corCombo;
         this.combo = combo;
         this.NUM_FAIXA = NUM_FAIXA;
+        this.index = index;
     }
-    
+   
     @Override
     public void actionPerformed(ActionEvent e) {
         corCombo.setIcon(getCor((String)combo.getSelectedItem()));
+        
         switch (NUM_FAIXA){
             case 1 -> {
-                 panel.setColorFaixa1(changeColor(getChangeColor((String)combo.getSelectedItem())));
+               panel.setColorFaixa1(changeColor(getChangeColor((String)combo.getSelectedItem()))); 
             }
             case 2 -> {
                 panel.setColorFaixa2(changeColor(getChangeColor((String)combo.getSelectedItem())));
@@ -117,6 +123,39 @@ public class ListenerCombo implements ActionListener {
         }
             return image;
     }
+    
+    private String changeTextField(int index,int NUM_FAIXA){
+        String resposta = null;
+        switch (NUM_FAIXA){
+            case 1 :{
+                this.index[0] = index+1;
+                resposta = Arrays.toString(this.index);
+                
+            }
+            case 2 :{
+                this.index[1] = index;
+                resposta = Arrays.toString(this.index);
+            }
+            case 3 :{
+                this.index[3] = index;
+                resposta = Arrays.toString(this.index);
+                
+            }
+            case 4 :{
+                this.index[4] = index;
+                resposta = Arrays.toString(this.index);
+                
+            }
+            case 5 :{
+                this.index[5] = index;
+                resposta = Arrays.toString(this.index);
+                
+            }
+            
+        }
+        return resposta;
+    }
+  
    
   
 }

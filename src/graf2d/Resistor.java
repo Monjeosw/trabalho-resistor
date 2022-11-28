@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
-public class Resistor extends JPanel {
+public class Resistor extends JPanel  {
     Image figura;
     Graphics2D faixa1;
     Graphics2D faixa2;
