@@ -21,7 +21,7 @@ public class ChangeTextField {
             
         }
        
-        String resposta =  Integer.toString(num) + "+-" + Integer.toString(porcentagem) ;
+        String resposta =  Integer.toString(num) + "+-" + Integer.toString(porcentagem)+ '%' ;
         
         return resposta;
     }

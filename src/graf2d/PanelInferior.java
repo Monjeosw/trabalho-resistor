@@ -26,7 +26,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         private JLabel imagem3 ; 
         private JLabel imagem4 ; 
         private JLabel imagem5 ; 
-        private JButton butao;
+        private JButton botao;
         private JTextField resultadoResistencia = new JTextField("00000");
         private JComboBox comboFaixa1;
         private JComboBox comboFaixa2;
@@ -76,7 +76,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         GridBagConstraints gb;
         
         
-       
+       //JTextField.
         resultadoResistencia.setPreferredSize(new Dimension(250,40));
         resultadoResistencia.setFont(new Font("Consolas",Font.PLAIN,35));
         gb = new GridBagConstraints();
@@ -87,22 +87,26 @@ public class PanelInferior extends JPanel implements ActionListener   {
         //gb.ipadx = 25;
         this.add(resultadoResistencia,gb);
         
-        butao = new JButton("Resultado");
+        //Botao.
+        botao = new JButton("Resultado");
+        botao.setFont(new Font("Consolas",Font.PLAIN,25));
+        botao.setBackground(new Color(169,169,169));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 0;
         gb.gridwidth =2 ;
         gb.gridheight = 1;
         gb.insets = new Insets(0,30,0,0);
-        butao.addActionListener(this);
-        this.add(butao,gb);
+        botao.addActionListener(this);
+        this.add(botao,gb);
         
-        //PRIMEIRA FAIXA.
+        //PRIMEIRA FAIXA label.
         JPanel panelLabel = new JPanel();
         JLabel label = new JLabel("1 faixa:");
         label.setFont(new Font("Arial",Font.ITALIC,30)); // mudançca de tamanho e de fonte.
         panelLabel.add(label);
-        panelLabel.setBackground(Color.yellow);
+        panelLabel.setBackground(new Color(0,191,255));
+        
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 1;
@@ -111,45 +115,65 @@ public class PanelInferior extends JPanel implements ActionListener   {
         gb.ipadx = 25;
         this.add(panelLabel,gb);
         
-        //SEGUNDA FAIXA.
-        JLabel labalFaixa2 = new JLabel("2 faixa:");
+        //SEGUNDA FAIXA LABEL.
+        JPanel panelLabel2 = new JPanel();
+        JLabel labelFaixa2 = new JLabel("2 faixa:");
+        labelFaixa2.setFont(new Font("Arial",Font.ITALIC,30)); 
+        panelLabel2.add(labelFaixa2);
+        panelLabel2.setBackground(new Color(0,191,255));
+        
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 3;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(labalFaixa2,gb);
+        this.add(panelLabel2,gb);
         
-        //TERCEIRA FAIXA.
-        JLabel labalFaixa3 = new JLabel("3 faixa:");
+        //TERCEIRA FAIXA LABEL.
+        JPanel panelLabel3 = new JPanel();
+        JLabel labelFaixa3 = new JLabel("3 faixa:");
+        labelFaixa3.setFont(new Font("Arial",Font.ITALIC,30)); 
+        panelLabel3.add(labelFaixa3);
+        panelLabel3.setBackground(new Color(0,191,255));;
+        
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 5;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(labalFaixa3,gb);
+        this.add(panelLabel3,gb);
         
-        //QUARTA FAIXA.
-        JLabel labalFaixa4 = new JLabel("4 faixa:");
+        //QUARTA FAIXA LABEL.
+        JPanel panelLabel4 = new JPanel();
+        JLabel labelFaixa4 = new JLabel("4 faixa:");
+        labelFaixa4.setFont(new Font("Arial",Font.ITALIC,30)); 
+        panelLabel4.add(labelFaixa4);
+        panelLabel4.setBackground(new Color(0,191,255));
+        
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 6;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(labalFaixa4,gb);
+        this.add(panelLabel4,gb);
         
-        //QUINTA FAIXA.
-        JLabel labalFaixa5 = new JLabel("5 faixa:");
+        //QUINTA FAIXA LABEL.
+        JPanel panelLabel5 = new JPanel();
+        JLabel labelFaixa5 = new JLabel("5 faixa:");
+        labelFaixa5.setFont(new Font("Arial",Font.ITALIC,30)); 
+        panelLabel5.add(labelFaixa5);
+        panelLabel5.setBackground(new Color(0,191,255));
+        
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 7;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(labalFaixa5,gb);
+        this.add(panelLabel5,gb);
         
         //IMAGEM PRIMEIRA FAIXA.
         gb = new GridBagConstraints();
@@ -197,6 +221,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         this.add(imagem5,gb);
        
         //COMBO PRIMEIRA FAIXA.
+        comboFaixa1.setFont(new Font("Arial",Font.ITALIC,20));
+        comboFaixa1.setBackground(new Color(230,230,250));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 1;
@@ -207,6 +233,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
 
         //COMBO SEGUNDA FAIXA.
+        comboFaixa2.setFont(new Font("Arial",Font.ITALIC,20));
+        comboFaixa2.setBackground(new Color(230,230,250));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 3;
@@ -216,6 +244,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         this.add(comboFaixa2,gb);
         
         //COMBO TERCEIRA FAIXA.
+        comboFaixa3.setFont(new Font("Arial",Font.ITALIC,20));
+        comboFaixa3.setBackground(new Color(230,230,250));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 5;
@@ -225,6 +255,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         this.add(comboFaixa3,gb);
         
         //COMBO QUARTA FAIXA.
+        comboFaixa4.setFont(new Font("Arial",Font.ITALIC,20));
+        comboFaixa4.setBackground(new Color(230,230,250));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 6;
@@ -234,6 +266,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         this.add(comboFaixa4,gb);
         
         //COMBO QUINTA FAIXA.
+        comboFaixa5.setFont(new Font("Arial",Font.ITALIC,20));
+        comboFaixa5.setBackground(new Color(230,230,250));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 7;
@@ -291,10 +325,10 @@ public class PanelInferior extends JPanel implements ActionListener   {
             
         }
         
-        if(e.getSource() == butao){
+        if(e.getSource() == botao){
             int [] a;
             a = new RecebeValorDigitado(resultadoResistencia.getText()).getIndexDigitado();
-            
+           
             comboFaixa1.setSelectedIndex(a[0]);
             comboFaixa2.setSelectedIndex(a[1]);
             comboFaixa3.setSelectedIndex(a[2]);
