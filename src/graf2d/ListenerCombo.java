@@ -14,23 +14,23 @@ public class ListenerCombo implements ActionListener {
     private JLabel corCombo;
     private JComboBox combo;
     private Resistor panel = Resistor.getInstance();
-    private int index [] = new int [5];
     
     private final static int COR_VERDE [] = {127,255,0};
-    private final static int COR_PRETO [] = {0,0,0}; //feito
-    private final static int COR_VERMELHO [] = {250,0,0}; //Feito
-    private final static int COR_MARROM [] = {178,34,34}; //FEITO
-    private final static int COR_LARANJA [] = {255,165,0}; //FEITO
-    private final static int COR_AMARELO [] = {255,255,0};//FEITO
-    private final static int COR_DOURADO [] = {218,165,32};//FEITO
+    private final static int COR_PRETO [] = {0,0,0};
+    private final static int COR_VERMELHO [] = {250,0,0}; 
+    private final static int COR_MARROM [] = {178,34,34}; 
+    private final static int COR_LARANJA [] = {255,165,0}; 
+    private final static int COR_AMARELO [] = {255,255,0};
+    private final static int COR_DOURADO [] = {218,165,32};
+    private final static int COR_PRATA [] = {192, 192, 192};
     
     private int NUM_FAIXA;
     
-    ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA,int index []){
+    ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA){
         this.corCombo = corCombo;
         this.combo = combo;
         this.NUM_FAIXA = NUM_FAIXA;
-        this.index = index;
+       
     }
    
     @Override
@@ -53,6 +53,7 @@ public class ListenerCombo implements ActionListener {
              case 5 -> {
                 panel.setColorFaixa5(changeColor(getChangeColor((String)combo.getSelectedItem())));
             }
+            
         }
     }
     
@@ -83,6 +84,9 @@ public class ListenerCombo implements ActionListener {
             }
             case "DOURADO"->{
                 corConstante = COR_DOURADO;
+            }
+            case "PRATA"->{
+                corConstante = COR_PRATA;
             }
             default -> {
                 
@@ -117,6 +121,9 @@ public class ListenerCombo implements ActionListener {
             case "DOURADO"->{
                 image = new ImageIcon("img/douradoProjeto.png");
             }
+            case "PRATA"->{
+                image = new ImageIcon("img/prataProjeto.png");
+            }
             default -> {
                 
             }
@@ -124,38 +131,7 @@ public class ListenerCombo implements ActionListener {
             return image;
     }
     
-    private String changeTextField(int index,int NUM_FAIXA){
-        String resposta = null;
-        switch (NUM_FAIXA){
-            case 1 :{
-                this.index[0] = index+1;
-                resposta = Arrays.toString(this.index);
-                
-            }
-            case 2 :{
-                this.index[1] = index;
-                resposta = Arrays.toString(this.index);
-            }
-            case 3 :{
-                this.index[3] = index;
-                resposta = Arrays.toString(this.index);
-                
-            }
-            case 4 :{
-                this.index[4] = index;
-                resposta = Arrays.toString(this.index);
-                
-            }
-            case 5 :{
-                this.index[5] = index;
-                resposta = Arrays.toString(this.index);
-                
-            }
-            
-        }
-        return resposta;
-    }
-  
    
+  
   
 }

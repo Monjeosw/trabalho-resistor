@@ -11,7 +11,6 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -21,14 +20,14 @@ import javax.swing.JTextField;
 
 
 
-public class PanelInferior extends JPanel implements ActionListener  {
+public class PanelInferior extends JPanel implements ActionListener   {
         private JLabel imagem ;   
         private JLabel imagem2 ;   
         private JLabel imagem3 ; 
         private JLabel imagem4 ; 
         private JLabel imagem5 ; 
         private JButton butao;
-        private JTextField resultadoResistencia = new JTextField();
+        private JTextField resultadoResistencia = new JTextField("00000");
         private JComboBox comboFaixa1;
         private JComboBox comboFaixa2;
         private JComboBox comboFaixa3;
@@ -245,20 +244,23 @@ public class PanelInferior extends JPanel implements ActionListener  {
         
 
         
-        comboFaixa1.addActionListener(new ListenerCombo(imagem, comboFaixa1,NUM_FAIXA1,getAllIndex()));
-        comboFaixa2.addActionListener(new ListenerCombo(imagem2, comboFaixa2,NUM_FAIXA2,getAllIndex()));
-        comboFaixa3.addActionListener(new ListenerCombo(imagem3, comboFaixa3,NUM_FAIXA3,getAllIndex()));
-        comboFaixa4.addActionListener(new ListenerCombo(imagem4, comboFaixa4,NUM_FAIXA4,getAllIndex()));
-        comboFaixa5.addActionListener(new ListenerCombo(imagem5, comboFaixa5,NUM_FAIXA4,getAllIndex()));
+        comboFaixa1.addActionListener(new ListenerCombo(imagem, comboFaixa1,NUM_FAIXA1));
+        comboFaixa2.addActionListener(new ListenerCombo(imagem2, comboFaixa2,NUM_FAIXA2));
+        comboFaixa3.addActionListener(new ListenerCombo(imagem3, comboFaixa3,NUM_FAIXA3));
+        comboFaixa4.addActionListener(new ListenerCombo(imagem4, comboFaixa4,NUM_FAIXA4));
+        comboFaixa5.addActionListener(new ListenerCombo(imagem5, comboFaixa5,NUM_FAIXA5));
         comboFaixa1.addActionListener(this);
         comboFaixa2.addActionListener(this);
+        comboFaixa3.addActionListener(this);
+        comboFaixa4.addActionListener(this);
+        comboFaixa5.addActionListener(this);
       
     }
     
     
      
     private int [] getAllIndex(){
-        int [] allIndex = new int [] {(comboFaixa1.getSelectedIndex()+1),comboFaixa2.getSelectedIndex(),comboFaixa3.getSelectedIndex(),
+        int [] allIndex = new int [] {(comboFaixa1.getSelectedIndex()),comboFaixa2.getSelectedIndex(),comboFaixa3.getSelectedIndex(),
                                       comboFaixa4.getSelectedIndex() ,comboFaixa5.getSelectedIndex()} ;
         
         return allIndex;
@@ -268,18 +270,38 @@ public class PanelInferior extends JPanel implements ActionListener  {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == comboFaixa1){
-            String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
-            resultadoResistencia.setText(resposta);
+            resultadoResistencia.setText(new ChangeTextField(getAllIndex()).retornaResposta());
             
         }
-         if(e.getSource() == comboFaixa2){
-            String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
-            resultadoResistencia.setText(resposta);
+        if(e.getSource() == comboFaixa2){
+           resultadoResistencia.setText(new ChangeTextField(getAllIndex()).retornaResposta());
             
         }
-        /*String resposta =  Integer.toString(getAllIndex()[0]) + Integer.toString(getAllIndex()[1])  ;
-        resultadoResistencia.setText(resposta);*/
-    //}
+         if(e.getSource() == comboFaixa3){
+           resultadoResistencia.setText(new ChangeTextField(getAllIndex()).retornaResposta());
+            
+        }
+          if(e.getSource() == comboFaixa4){
+           resultadoResistencia.setText(new ChangeTextField(getAllIndex()).retornaResposta());
+            
+        }
+        if(e.getSource() == comboFaixa5){
+           resultadoResistencia.setText(new ChangeTextField(getAllIndex()).retornaResposta());
+            
+        }
+        
+        if(e.getSource() == butao){
+            int [] a;
+            a = new RecebeValorDigitado(resultadoResistencia.getText()).getIndexDigitado();
+            
+            comboFaixa1.setSelectedIndex(a[0]);
+            comboFaixa2.setSelectedIndex(a[1]);
+            comboFaixa3.setSelectedIndex(a[2]);
+            comboFaixa4.setSelectedIndex(a[3]);
+            comboFaixa5.setSelectedIndex(a[4]);
+        }
+        
+
    }
     
    

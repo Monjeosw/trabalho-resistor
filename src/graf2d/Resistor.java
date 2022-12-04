@@ -29,7 +29,7 @@ public class Resistor extends JPanel  {
        
         this.setLayout(new BorderLayout());
         figura = new ImageIcon("img/resistor2.png").getImage(); 
-        this.setPreferredSize(new Dimension(700,100));
+        this.setPreferredSize(new Dimension(700,200));
         this.setBackground(Color.YELLOW);
     }
     
@@ -40,12 +40,13 @@ public class Resistor extends JPanel  {
     @Override
     public void paintComponent(Graphics g){
         faixa1 = (Graphics2D) g;
-        faixa1.drawImage(figura, 0, -300, null);
+        //faixa1.drawImage(figura, 0, -250, null);
         faixa1.setColor(getColorFaixa1());
         faixa1.fillRect(271, 19, 7, 62);
         
         faixa2 =(Graphics2D) g;
         faixa2.setColor(getColorFaixa2());
+        faixa2.drawRect(313, 24, 8, 52);
         faixa2.fillRect(313, 24, 8, 52);
         
         faixa3 =(Graphics2D) g;
@@ -92,6 +93,7 @@ public class Resistor extends JPanel  {
     public void setColorFaixa2 (Color colorFaixa2){
         this.colorFaixa2 = colorFaixa2;
         repaint(313,24,8,52);
+        
        
     }
     
