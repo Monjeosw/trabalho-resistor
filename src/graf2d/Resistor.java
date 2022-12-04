@@ -4,6 +4,7 @@ package graf2d;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -29,7 +30,7 @@ public class Resistor extends JPanel  {
     
     private Resistor(){
        
-        this.setLayout(new BorderLayout());
+        this.setLayout(new FlowLayout());
         figura = new ImageIcon("img/resistorTeste3.png").getImage(); 
         this.setPreferredSize(new Dimension(700,100));
         this.setBackground(Color.YELLOW);
@@ -42,6 +43,8 @@ public class Resistor extends JPanel  {
     @Override
     public void paintComponent(Graphics g){
         faixa = (Graphics2D) g;
+        faixa.setColor(Color.cyan);
+        faixa.fillRect(80, 5, 565, 500);
         faixa.drawImage(figura, -40, -394, null);
         
         
