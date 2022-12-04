@@ -40,6 +40,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         private final static int NUM_FAIXA4 = 4;
         private final static int NUM_FAIXA5 = 5;
         
+        
     
     PanelInferior(){
        
