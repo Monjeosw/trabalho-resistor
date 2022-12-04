@@ -23,6 +23,10 @@ public class ListenerCombo implements ActionListener {
     private final static int COR_AMARELO [] = {255,255,0};
     private final static int COR_DOURADO [] = {218,165,32};
     private final static int COR_PRATA [] = {192, 192, 192};
+    private final static int COR_AZUL [] = {0,0,255};
+    private final static int COR_VIOLETA [] = {144, 75, 210};
+    private final static int COR_CINZA [] = {105,105,105};
+    private final static int COR_BRANCO [] = {255,255,255};
     
     private int NUM_FAIXA;
     
@@ -88,6 +92,18 @@ public class ListenerCombo implements ActionListener {
             case "PRATA"->{
                 corConstante = COR_PRATA;
             }
+            case "AZUL"->{
+                corConstante = COR_AZUL;
+            }
+            case "VIOLETA"->{
+                corConstante = COR_VIOLETA;
+            }
+            case "CINZA"->{
+                corConstante = COR_CINZA;
+            }
+            case "BRANCO"->{
+                corConstante = COR_BRANCO;
+            }
             default -> {
                 
             }
@@ -123,6 +139,18 @@ public class ListenerCombo implements ActionListener {
             }
             case "PRATA"->{
                 image = new ImageIcon("img/prataProjeto.png");
+            }
+            case "AZUL"->{
+                image = new ImageIcon("img/azulProjeto.png");
+            }
+            case "VIOLETA"->{
+                image = new ImageIcon("img/violetaProjeto.png");
+            }
+            case "CINZA"->{
+                image = new ImageIcon("img/cinzaProjeto.png");
+            }
+            case "BRANCO"->{
+                image = new ImageIcon("img/brancuProjeto.png");
             }
             default -> {
                 

@@ -17,6 +17,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
 
 
 
@@ -43,7 +44,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
     
     PanelInferior(){
-       
+        this.setBackground(new Color(220,220,222));
         imagem = new JLabel();
         imagem.setIcon( new ImageIcon ("img/marromProjeto.png"));
         imagem2 = new JLabel();
@@ -77,7 +78,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
         
        //JTextField.
-        resultadoResistencia.setPreferredSize(new Dimension(250,40));
+        resultadoResistencia.setPreferredSize(new Dimension(300,40));
         resultadoResistencia.setFont(new Font("Consolas",Font.PLAIN,35));
         gb = new GridBagConstraints();
         gb.gridx = 1;        
@@ -104,6 +105,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         JPanel panelLabel = new JPanel();
         JLabel label = new JLabel("1 faixa:");
         label.setFont(new Font("Arial",Font.ITALIC,30)); // mudançca de tamanho e de fonte.
+        panelLabel.setBorder(new BevelBorder(BevelBorder.RAISED,Color.white,Color.black));
         panelLabel.add(label);
         panelLabel.setBackground(new Color(0,191,255));
         

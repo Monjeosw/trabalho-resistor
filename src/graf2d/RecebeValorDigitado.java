@@ -6,8 +6,6 @@ public class RecebeValorDigitado {
     
     public RecebeValorDigitado(String valor) {
         this.valor = valor;
-        
-       
     }
     
     public int[] getIndexDigitado(){

@@ -30,11 +30,11 @@ public class Resistor extends JPanel  {
     private static Resistor uniqueInstance = new Resistor();
     
     private Resistor(){
-       
+        this.setBackground(new Color(0,0,0));
         this.setLayout(new FlowLayout());
         figura = new ImageIcon("img/resistorTeste3.png").getImage(); 
         this.setPreferredSize(new Dimension(700,100));
-        this.setBackground(Color.YELLOW);
+        
     }
     
     public static Resistor getInstance(){
@@ -45,11 +45,11 @@ public class Resistor extends JPanel  {
     public void paintComponent(Graphics g){
         mainImage = (Graphics2D) g;
         mainImage.setColor(new Color(255,248,220));
-        mainImage.fillRect(80, 5, 565, 500);
+        mainImage.fillRect(2, 5, 695, 95);
         
         mainImage.setColor(new Color(0,0,0));
         mainImage.setStroke(new BasicStroke(5));
-        mainImage.drawRect(80,1 , 565, 95);
+        mainImage.drawRect(2,1 , 695, 95);
         mainImage.drawImage(figura, -40, -394, null);
         
         
