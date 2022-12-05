@@ -30,7 +30,6 @@ public class RecebeValorDigitado {
                 i++;
             }
         }
-        System.out.println(indexDigitado[3]);
         if(valor.charAt(i) =='5')
             indexDigitado[4] = 0;
         else 
