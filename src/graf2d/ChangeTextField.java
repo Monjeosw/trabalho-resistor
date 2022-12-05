@@ -22,6 +22,7 @@ public class ChangeTextField {
  
             if(mult>=7){
                 multilplicao = "M";
+                
                 if(mult==7)    
                     num*=10;
                 

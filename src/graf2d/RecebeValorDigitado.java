@@ -29,6 +29,9 @@ public class RecebeValorDigitado {
                 indexDigitado[3] += 1;
                 i++;
             }
+            if(indexDigitado[3]>9)
+                indexDigitado[3] = -1;
+            
         }
         if(valor.charAt(i) =='5')
             indexDigitado[4] = 0;

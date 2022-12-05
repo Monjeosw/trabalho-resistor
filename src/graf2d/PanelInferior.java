@@ -330,12 +330,18 @@ public class PanelInferior extends JPanel implements ActionListener   {
         if(e.getSource() == botao){
             int [] a;
             a = new RecebeValorDigitado(resultadoResistencia.getText()).getIndexDigitado();
-           
+            if(a[3] == -1){
+                resultadoResistencia.setText("Erro");
+            }
+            
+            else{
+            
             comboFaixa1.setSelectedIndex(a[0]);
             comboFaixa2.setSelectedIndex(a[1]);
             comboFaixa3.setSelectedIndex(a[2]);
             comboFaixa4.setSelectedIndex(a[3]);
             comboFaixa5.setSelectedIndex(a[4]);
+            }
         }
         
 
