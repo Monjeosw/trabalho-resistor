@@ -44,12 +44,12 @@ public class Resistor extends JPanel  {
     @Override
     public void paintComponent(Graphics g){
         mainImage = (Graphics2D) g;
-        mainImage.setColor(new Color(255,248,220));
+        mainImage.setColor(new Color(231,223,221));
         mainImage.fillRect(2, 5, 695, 95);
         
         mainImage.setColor(new Color(0,0,0));
         mainImage.setStroke(new BasicStroke(5));
-        mainImage.drawRect(2,1 , 695, 95);
+        mainImage.drawRect(2,1 , 695, 96);
         mainImage.drawImage(figura, -60, -394, null);
         
         

@@ -17,6 +17,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
 
 
 public class PanelInferior extends JPanel implements ActionListener   {
@@ -42,7 +43,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
     
     PanelInferior(){
-        this.setBackground(new Color(220,220,222));
+        this.setBackground(new Color(109,121,147));
         imagem = new JLabel();
         imagem.setIcon( new ImageIcon ("img/marromProjeto.png"));
         imagem2 = new JLabel();
@@ -85,8 +86,9 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
         //Botao.
         botao = new JButton("Resultado");
-        botao.setFont(new Font("Consolas",Font.PLAIN,25));
-        botao.setBackground(new Color(169,169,169));
+        botao.setFont(new Font("Consolas",Font.PLAIN,30));
+        botao.setBackground(new Color(190,236,227));
+        botao.setBorder(new BevelBorder(BevelBorder.RAISED,Color.white,Color.black));
         gb = new GridBagConstraints();
         gb.gridx = 3;        
         gb.gridy = 0;
