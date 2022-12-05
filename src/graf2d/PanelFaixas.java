@@ -18,7 +18,6 @@ public class PanelFaixas extends JPanel{
        
        this.add(faixa);
        this.setBackground(new Color(150,133,143));
-       //75,0,130
        this.setBorder(new BevelBorder(BevelBorder.RAISED,Color.white,Color.black));
     }
     

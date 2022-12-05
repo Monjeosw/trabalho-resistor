@@ -15,7 +15,6 @@ public class RecebeValorDigitado {
             if(!Character.isDigit( valor.charAt(i)))
                 resposta =false;
 
-        
         return resposta;
     }
     

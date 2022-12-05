@@ -49,18 +49,15 @@ public class FrameHelp  extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {         
-  //int porcentagem = (allIndex[4]==0)?5:10;
         if(e.getSource() ==prox)
             i = (i+1>4)?4:++i;
 
         else 
             i = (i-1<0)?0:--i;
         
-
        if(i==0)
             imagem.setIcon( new ImageIcon ("img/help1.png"));
       
-           
         if(i==1)
             imagem.setIcon( new ImageIcon ("img/help3.png"));
                     

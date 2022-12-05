@@ -13,11 +13,15 @@ public class Frame2D extends JFrame {
         
         PanelInferior inferior = new PanelInferior();
         Resistor panel = Resistor.getInstance();
+        
         JButton help = new JButton("help");
         help.addActionListener(new ListenerHelp());
+        
+        
+        this.add(help,BorderLayout.SOUTH);
         this.add(panel,BorderLayout.NORTH);
         this.add(inferior,BorderLayout.CENTER);
-        this.add(help,BorderLayout.SOUTH);
+        
   
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
