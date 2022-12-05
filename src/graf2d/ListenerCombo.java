@@ -4,17 +4,15 @@ package graf2d;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
+
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 public class ListenerCombo implements ActionListener {
     private JLabel corCombo;
     private JComboBox combo;
     private Resistor panel = Resistor.getInstance();
-    
     private final static int COR_VERDE [] = {127,255,0};
     private final static int COR_PRETO [] = {0,0,0};
     private final static int COR_VERMELHO [] = {250,0,0}; 
@@ -27,16 +25,14 @@ public class ListenerCombo implements ActionListener {
     private final static int COR_VIOLETA [] = {144, 75, 210};
     private final static int COR_CINZA [] = {105,105,105};
     private final static int COR_BRANCO [] = {255,255,255};
-    
     private int NUM_FAIXA;
     
     ListenerCombo(JLabel corCombo,JComboBox combo,int NUM_FAIXA){
         this.corCombo = corCombo;
         this.combo = combo;
         this.NUM_FAIXA = NUM_FAIXA;
-       
+
     }
-   
     @Override
     public void actionPerformed(ActionEvent e) {
         corCombo.setIcon(getCor((String)combo.getSelectedItem()));

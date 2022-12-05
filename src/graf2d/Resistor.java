@@ -50,28 +50,28 @@ public class Resistor extends JPanel  {
         mainImage.setColor(new Color(0,0,0));
         mainImage.setStroke(new BasicStroke(5));
         mainImage.drawRect(2,1 , 695, 95);
-        mainImage.drawImage(figura, -40, -394, null);
+        mainImage.drawImage(figura, -60, -394, null);
         
         
         faixa1 = (Graphics2D) g;
         faixa1.setColor(getColorFaixa1());
-        faixa1.fillRect(265, 11, 10, 79);
+        faixa1.fillRect(245, 11, 10, 79);
         
         faixa2 =(Graphics2D) g;
         faixa2.setColor(getColorFaixa2());
-        faixa2.fillRect(311, 18, 10, 66);
+        faixa2.fillRect(291, 18, 10, 66);
         
         faixa3 =(Graphics2D) g;
         faixa3.setColor(getColorFaixa3());
-        faixa3.fillRect(340, 18, 10, 66);
+        faixa3.fillRect(320, 18, 10, 66);
         
         faixa4 =(Graphics2D) g;
         faixa4.setColor(getColorFaixa4());
-        faixa4.fillRect(370, 18, 10, 66);
+        faixa4.fillRect(350, 18, 10, 66);
        
         faixa5 =(Graphics2D) g;
         faixa5.setColor(getColorFaixa5());
-        faixa5.fillRect(454, 11,10, 79);
+        faixa5.fillRect(434, 11,10, 79);
         
     }
     
@@ -97,31 +97,31 @@ public class Resistor extends JPanel  {
 
     public void setColorFaixa1 (Color getColorFaixa1){
         this.colorFaixa1 = getColorFaixa1;
-        repaint(265, 11, 10, 79);
+        repaint(245, 11, 10, 79);
         
     }
     
     
     public void setColorFaixa2 (Color colorFaixa2){
         this.colorFaixa2 = colorFaixa2;
-        repaint(311, 18, 10, 66);
+        repaint(291, 18, 10, 66);
         
        
     }
     
     public void setColorFaixa3 (Color colorFaixa3){
         this.colorFaixa3 = colorFaixa3;
-        repaint(340, 18, 10, 66);
+        repaint(320, 18, 10, 66);
     }
     
     public void setColorFaixa4 (Color colorFaixa4){
         this.colorFaixa4 = colorFaixa4;
-        repaint(370, 18, 10, 66);
+        repaint(350, 18, 10, 66);
     }
     
     public void setColorFaixa5 (Color colorFaixa5){
         this.colorFaixa5 = colorFaixa5;
-        repaint(454, 11,10, 79);
+        repaint(434, 11,10, 79);
     }
     
   
