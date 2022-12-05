@@ -33,7 +33,7 @@ public class RecebeValorDigitado {
             else {
                 indexDigitado[3] = 1;
                 i++;
-                while(valor.charAt(i) == '0'&& indexDigitado[0]!=-1 && i<valor.length()-1){
+                while(valor.charAt(i) == '0' && indexDigitado[0]!=-1 && i<valor.length()-1){
                     indexDigitado[3] += 1;
                     i++;
                 }
@@ -45,7 +45,7 @@ public class RecebeValorDigitado {
             if(valor.charAt(i) =='5' && i==valor.length()- 1)
                 indexDigitado[4] = 0;
             
-            else if(valor.charAt(i) =='1' &&valor.charAt(i+1) =='0')
+            else if(valor.charAt(i) =='1' && valor.charAt(i+1) =='0')
                 indexDigitado[4] = 1; 
             
             else {
