@@ -17,8 +17,6 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.BevelBorder;
-
 
 
 public class PanelInferior extends JPanel implements ActionListener   {
@@ -72,11 +70,9 @@ public class PanelInferior extends JPanel implements ActionListener   {
         comboFaixa3= new JComboBox(fullColors);
         comboFaixa4= new JComboBox(fullColors);
         comboFaixa5= new JComboBox(colorFaixa5);
-        
+ 
         
         GridBagConstraints gb;
-        
-        
        //JTextField.
         resultadoResistencia.setPreferredSize(new Dimension(300,40));
         resultadoResistencia.setFont(new Font("Consolas",Font.PLAIN,35));
@@ -299,7 +295,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
             int [] a;
             a = new RecebeValorDigitado(resultadoResistencia.getText()).getIndexDigitado();
             
-            if(a[3] == -1){
+            if(a[3] == -1 || a[0] == -1 ){
                 resultadoResistencia.setText("Erro");
             }
             
@@ -315,9 +311,8 @@ public class PanelInferior extends JPanel implements ActionListener   {
         
 
    }
-    
+}
    
     
-}
     
   
