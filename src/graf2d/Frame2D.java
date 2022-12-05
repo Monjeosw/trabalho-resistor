@@ -1,6 +1,7 @@
 
 package graf2d;
 import java.awt.BorderLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 
@@ -12,13 +13,15 @@ public class Frame2D extends JFrame {
         
         PanelInferior inferior = new PanelInferior();
         Resistor panel = Resistor.getInstance();
-        
+        JButton help = new JButton("help");
+        help.addActionListener(new ListenerHelp());
         this.add(panel,BorderLayout.NORTH);
-        this.add(inferior,BorderLayout.SOUTH);
+        this.add(inferior,BorderLayout.CENTER);
+        this.add(help,BorderLayout.SOUTH);
   
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
-        //this.setSize(800,800);
+        this.setResizable(false);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
       
