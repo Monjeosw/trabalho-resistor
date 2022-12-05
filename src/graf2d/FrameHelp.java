@@ -19,8 +19,9 @@ public class FrameHelp  extends JFrame implements ActionListener{
     JButton prox;
     JButton ant;
     
-    FrameHelp(){
+    FrameHelp(String titulo){
         this.setLayout(new BorderLayout());
+        this.setTitle(titulo);
         JPanel panel = new JPanel();
         JPanel panelBotoes = new JPanel(new FlowLayout());
         

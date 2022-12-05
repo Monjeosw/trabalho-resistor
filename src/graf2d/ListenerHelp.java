@@ -9,7 +9,7 @@ public class ListenerHelp implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        FrameHelp frame = new FrameHelp();
+        FrameHelp frame = new FrameHelp("HELP ME PLEASI");
     }
     
 }

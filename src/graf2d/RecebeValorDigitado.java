@@ -11,9 +11,13 @@ public class RecebeValorDigitado {
     private boolean verificaNumeros(){
         boolean resposta = true;
         
-        for (int i=0; i<valor.length()-1; i++) 
-            if(!Character.isDigit( valor.charAt(i)))
-                resposta =false;
+        if(valor.length()-1<3) 
+            resposta = false;
+        
+        else
+            for (int i=0; i<valor.length()-1; i++) 
+                if(!Character.isDigit( valor.charAt(i)))
+                    resposta =false;
 
         return resposta;
     }
@@ -22,7 +26,7 @@ public class RecebeValorDigitado {
         int [] indexDigitado = {-1,-1,-1,-1,-1};
         int i = 3;
         
-        if(verificaNumeros());
+        if(verificaNumeros()){
             indexDigitado[0] = Character.getNumericValue(valor.charAt(0))-1 ;
             indexDigitado[1] = Character.getNumericValue(valor.charAt(1));
             indexDigitado[2] = Character.getNumericValue(valor.charAt(2));
@@ -50,7 +54,8 @@ public class RecebeValorDigitado {
             
             else {
                  indexDigitado[0] =-1;
-            } 
+            }
+        }
         
             
        return indexDigitado;

@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/FrameHelp.java</file>
             <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/Resistor.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/ListenerCombo.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/ListenerHelp.java</file>
             <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/Frame2D.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/ListenerCombo.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/PanelFaixas.java</file>
             <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/ChangeTextField.java</file>
             <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/RecebeValorDigitado.java</file>
             <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/PanelInferior.java</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/Graf2D.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/Graf2D/src/graf2d/SetCombo.java</file>
         </group>
     </open-files>
 </project-private>

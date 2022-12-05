@@ -8,8 +8,9 @@ import javax.swing.JFrame;
 
 public class Frame2D extends JFrame {
    
-    Frame2D(){
+    Frame2D(String titulo){
         this.setLayout(new BorderLayout());
+        this.setTitle(titulo);
         
         PanelInferior inferior = new PanelInferior();
         Resistor panel = Resistor.getInstance();
