@@ -85,7 +85,6 @@ public class PanelInferior extends JPanel implements ActionListener   {
         gb.gridy = 0;
         gb.gridwidth =2 ;
         gb.gridheight = 1;
-        //gb.ipadx = 25;
         this.add(resultadoResistencia,gb);
         
         //Botao.
@@ -102,27 +101,17 @@ public class PanelInferior extends JPanel implements ActionListener   {
         this.add(botao,gb);
         
         //PRIMEIRA FAIXA label.
-        JPanel panelLabel = new JPanel();
-        JLabel label = new JLabel("1 faixa:");
-        label.setFont(new Font("Arial",Font.ITALIC,30)); // mudançca de tamanho e de fonte.
-        panelLabel.setBorder(new BevelBorder(BevelBorder.RAISED,Color.white,Color.black));
-        panelLabel.add(label);
-        panelLabel.setBackground(new Color(0,191,255));
-        
+        PanelFaixas faixa1 = new PanelFaixas("1 FAIXA :");
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 1;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(panelLabel,gb);
+        this.add(faixa1,gb);
         
         //SEGUNDA FAIXA LABEL.
-        JPanel panelLabel2 = new JPanel();
-        JLabel labelFaixa2 = new JLabel("2 faixa:");
-        labelFaixa2.setFont(new Font("Arial",Font.ITALIC,30)); 
-        panelLabel2.add(labelFaixa2);
-        panelLabel2.setBackground(new Color(0,191,255));
+        PanelFaixas faixa2 = new PanelFaixas("2 FAIXA :");;
         
         gb = new GridBagConstraints();
         gb.gridx = 0;        
@@ -130,14 +119,10 @@ public class PanelInferior extends JPanel implements ActionListener   {
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(panelLabel2,gb);
+        this.add(faixa2,gb);
         
         //TERCEIRA FAIXA LABEL.
-        JPanel panelLabel3 = new JPanel();
-        JLabel labelFaixa3 = new JLabel("3 faixa:");
-        labelFaixa3.setFont(new Font("Arial",Font.ITALIC,30)); 
-        panelLabel3.add(labelFaixa3);
-        panelLabel3.setBackground(new Color(0,191,255));;
+        PanelFaixas faixa3 = new PanelFaixas("3 FAIXA :");;
         
         gb = new GridBagConstraints();
         gb.gridx = 0;        
@@ -145,29 +130,20 @@ public class PanelInferior extends JPanel implements ActionListener   {
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(panelLabel3,gb);
+        this.add(faixa3,gb);
         
         //QUARTA FAIXA LABEL.
-        JPanel panelLabel4 = new JPanel();
-        JLabel labelFaixa4 = new JLabel("4 faixa:");
-        labelFaixa4.setFont(new Font("Arial",Font.ITALIC,30)); 
-        panelLabel4.add(labelFaixa4);
-        panelLabel4.setBackground(new Color(0,191,255));
-        
+        PanelFaixas faixa4 = new PanelFaixas("4 FAIXA :");
         gb = new GridBagConstraints();
         gb.gridx = 0;        
         gb.gridy = 6;
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(panelLabel4,gb);
+        this.add(faixa4,gb);
         
         //QUINTA FAIXA LABEL.
-        JPanel panelLabel5 = new JPanel();
-        JLabel labelFaixa5 = new JLabel("5 faixa:");
-        labelFaixa5.setFont(new Font("Arial",Font.ITALIC,30)); 
-        panelLabel5.add(labelFaixa5);
-        panelLabel5.setBackground(new Color(0,191,255));
+        PanelFaixas faixa5 = new PanelFaixas("5 FAIXA :");
         
         gb = new GridBagConstraints();
         gb.gridx = 0;        
@@ -175,7 +151,7 @@ public class PanelInferior extends JPanel implements ActionListener   {
         gb.gridwidth =1 ;
         gb.gridheight = 1;
         gb.ipadx = 25;
-        this.add(panelLabel5,gb);
+        this.add(faixa5,gb);
         
         //IMAGEM PRIMEIRA FAIXA.
         gb = new GridBagConstraints();
